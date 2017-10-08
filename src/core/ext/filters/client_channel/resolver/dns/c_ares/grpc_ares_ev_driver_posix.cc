@@ -21,7 +21,9 @@
 
 #include <ares.h>
 #include <sys/ioctl.h>
-
+#if GPR_SUNOS == 1
+#include <unistd.h>
+#endif
 #include "src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver.h"
 
 #include <grpc/support/alloc.h>
